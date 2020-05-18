@@ -39,7 +39,7 @@
       if(isset($_POST['acceso']))
       {
         //llama al archivo php
-        require("CodigoAcceso.php");
+        require("codigoAcceso.php");
       }
   ?>
 </html>
