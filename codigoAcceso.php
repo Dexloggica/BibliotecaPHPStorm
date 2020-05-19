@@ -4,7 +4,8 @@
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-if (isset($username)) {
+if (isset($username))
+{
 
     //Proceso de conexión con la base de datos
     // @$conex= mysql_connect("localhost","root","") or die("No se pudo realizar la conexion");
@@ -27,13 +28,14 @@ if (isset($username)) {
     else {
         //Definimos las variables de sesión y redirigimos a la página de usuario
         $_SESSION['idusuario'] = $fila['idUsuario'];
-        $_SESSION['username'] = $fila['username'];
+        $_SESSION['username'] = $fila['Username'];
         $_SESSION['tipoperfil'] = $fila['TipoPerfil_idTipoPerfil'];
 
         header("Location:biblioteca.php");
+        //header("location:biblioteca.html");
         //echo "pudiste entrar a la pagina, al fin";
-        $NombreTablaEditada = "Acceso al Sistema";
-        require("registrarControl.php");
+        #$NombreTablaEditada = "Acceso al Sistema";
+        // require("biblioteca.html");
     }
     mysqli_free_result($resultado);
     mysqli_close($link);

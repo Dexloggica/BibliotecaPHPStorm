@@ -2,7 +2,7 @@
 
 // header("Content-Type: text/html;charset=utf-8");
 // @$link=mysql_connect("localhost","root","");
-$link = mysqli_connect("localhost","root","","20181201_version1");
+$link = mysqli_connect("localhost","root","","mydbbiblioteca");
 //si link es true es que se a conectado al servidores
 if(!$link)
 {
